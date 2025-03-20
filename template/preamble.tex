@@ -1,0 +1,78 @@
+% !TeX root = hw.tex
+
+\usepackage{amsmath, amsthm, amssymb, bm, color, framed, graphicx, hyperref, mathrsfs}
+\usepackage{enumitem, mathtools, tikz, tikz-cd}
+\usetikzlibrary{positioning}
+
+\linespread{1.25}
+
+\usepackage[margin=1in]{geometry} 
+
+\usepackage{fancyhdr} % 页眉页脚设置
+\usepackage{titlesec} % 标题格式设置
+\usepackage{fontspec} % 字体设置（如果使用 XeLaTeX 或 LuaLaTeX）
+
+% 设置标题格式
+\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+
+% 设置页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\leftmark} % 页眉显示章节标题
+\fancyfoot[C]{第 \thepage 页} % 页脚显示页码
+\setlength{\headheight}{14.5pt} 
+
+%设置问题
+\definecolor{shadecolor}{RGB}{241, 241, 255}
+\newcounter{pb} % 依照出处的题目编号
+\newcounter{pbc} % 完成计数数
+
+% 设置 section 的格式
+\titleformat{\section}
+  {\normalfont\Large\bfseries} % 格式
+  {} % 编号
+  {0pt} % 缩进
+  {} % 前缀
+
+% 设置无编号 section 的格式
+\titleformat{name=\section,numberless}
+  {\normalfont\Large\bfseries} % 格式
+  {} % 编号
+  {0pt} % 缩进
+  {} % 前缀
+
+% 设置 subsection 的格式
+\titleformat{\subsection}
+  {\normalfont\large\bfseries} % 格式
+  {} % 编号
+  {0pt} % 缩进
+  {} % 前缀
+
+% 设置无编号 subsection 的格式
+\titleformat{name=\subsection,numberless}
+  {\normalfont\large\bfseries} % 格式
+  {} % 编号
+  {0pt} % 缩进
+  {} % 前缀
+
+% 设置 subsubsection 的格式
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries} % 格式
+  {} % 编号
+  {0pt} % 缩进
+  {} % 前缀
+
+% 设置无编号 subsubsection 的格式
+\titleformat{name=\subsubsection,numberless}
+  {\normalfont\normalsize\bfseries} % 格式
+  {} % 编号
+  {0pt} % 缩进
+  {} % 前缀
+
+%------
+
+%抑制 警告
+\usepackage{silence}
+\WarningFilter{latexfont}{Font shape}
+\WarningFilter{latexfont}{Size substitutions}

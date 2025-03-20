@@ -1,0 +1,16 @@
+% !TeX root = hw.tex
+\newenvironment{problem}{\begin{shaded}\par\noindent\textbf{题目\arabic{pb} \iffalse\textsuperscript{\arabic{pbc}} \fi.}}{\end{shaded}\stepcounter{pbc}\stepcounter{pb}}
+\newenvironment{solution}{\par\noindent\textbf{解答.\textsuperscript{\arabic{pbc}} }}{\fqed}
+\newenvironment{vain}{\par\noindent\textbf{尝试.}}{\par}
+\newenvironment{note}{\par\noindent\textbf{题目\arabic{pb}的注记. }}{\fqed}
+
+% Fake QED
+\newcommand*{\fqed}[1][$\blacksquare$]{%
+\leavevmode\unskip\penalty9999 \hbox{}\nobreak\hfill
+    \quad\hbox{#1}%
+}
+
+% THEOREM
+
+\newtheorem{theorem}{定理}%[section]
+\newtheorem{lemma}[theorem]{引理}

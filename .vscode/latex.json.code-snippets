@@ -1,0 +1,10 @@
+{
+"counter": 
+{
+  "prefix": "sc",
+  "body": [
+    "\\setcounter{pb}{$1}\n"
+  ],
+  "description": "counter"
+}
+}
