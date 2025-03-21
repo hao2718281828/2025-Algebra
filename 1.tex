@@ -574,7 +574,7 @@ B = \begin{pmatrix} 0 & 1 \\ -1 & -1 \end{pmatrix}
             \overset{(i_1 i_2 \cdots i_r)}{\longmapsto} i_{k+1}
             \overset{\alpha}{\longmapsto} \alpha(i_{k+1}).
         \]
-    For elements that fixed by $\alpha$:
+    For elements invariant under $\alpha$:
         \[
             \ell
             \overset{\alpha^{-1}}{\longmapsto} \ell
@@ -609,6 +609,33 @@ B = \begin{pmatrix} 0 & 1 \\ -1 & -1 \end{pmatrix}
 
 \section{环论}
 \subsection{第一章}
+\setcounter{pb}{31}
+\begin{problem}
+环 $L$ 中元素 $e_L$ 称为一个左单位，如果对所有的 $a \in L$, 
+\[
+e_L a = a;
+\]
+元素 $e_R$ 称为一个右单位，如果对所有的 $a \in L$, 
+\[
+a e_R = a.
+\]
+
+证明：
+\begin{enumerate}[label=(\roman*)]
+    \item 如果 $L$ 既有左单位又有右单位，则 $L$ 具有单位元素。
+    \item 如果 $L$ 有左单位，$L$ 无零因子，则 $L$ 具有单位元素。
+    \item 如果 $L$ 有左单位，但没有右单位，则 $L$ 至少有两个左单位。
+\end{enumerate}
+\end{problem}
+
+\begin{vain}
+    设左、右单位分别是 $e_{L}, e_{R}$, 则他们相等: 
+        \[
+            e_{L}=e_{L} e_{R}=e_{R}.
+        \]
+    证明 $L$ 具有右单位即可.
+\end{vain}
+
 \setcounter{pb}{43}
 
 \begin{problem}
