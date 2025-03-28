@@ -273,7 +273,7 @@ B = \begin{pmatrix} 0 & 1 \\ -1 & -1 \end{pmatrix}
         \[
             |H K|=\frac{|H||K|}{|H\cap K|}=15\implies G= H K
         \]
-    由内直积的刻画, 这就是 $G=H\times K$; 换言之, $G\cong \mathbb{Z}/\langle 3 \rangle\times\mathbb{Z}/\langle 5 \rangle\cong\mathbb{Z}/\langle 15 \rangle$(中国剩余定理). 
+    由内直积的刻画, 这就是 $G=H\times K$; 换言之, $G\cong \mathbb{Z}/\langle 3 \rangle\times\mathbb{Z}/\langle 5 \rangle\cong\mathbb{Z}/\langle 15 \rangle$, 由中国剩余定理. 
     \par 综上所述, 同构意义下, $15$ 阶群只有 $\mathbb{Z}/\langle 15 \rangle$.
 \end{solution}
 
@@ -322,34 +322,28 @@ B = \begin{pmatrix} 0 & 1 \\ -1 & -1 \end{pmatrix}
     设 $p,q $ 为不同的素数, 证明 $p^2 q $ 阶群必包含一个正规西罗子群。
 \end{problem}
 
-% \begin{itemize}
-%     \item 当 $p<q$, 有 $N_{p}\equiv1\pmod{p}, N_{p}\mid q\implies N_{q}=1$; 此时 Sylow $q$-子群正规.
-%     \item 当 $p>q$, 有 $N_{q}\equiv1\pmod{q}, N_{q}\mid p^{2}$: 
-%     % \begin{itemize}
-%     %     \item 若 $N_{q}=1$, 则 Sylow-$p$ 子群正规; 
-%     %     % \item 若 $N_{q}=p$, 则 $p=1\pmod{q}$. 这 $p$ 个 Sylow $q$-子群两两仅相交于 $\{e\}$, 计数可得 $q$-阶元有 $p(q-1)$ 个. 
-%     %     % 所以有 $p^{2}$ 个元,
-%     %     \item 若 $N_{q}=p^{2}$, 则 $p^{2}=1\pmod{q}$. 这 $p^{2}$ 个 Sylow $q$-子群两两仅相交于 $\{e\}$, 计数可得 $q$-阶元有 $p^{2}(q-1)$ 个. 
-%     %     所以有 $p^{2}-1$ 个元, 阶数从 $\{p, p^{2}, p q\}$ 中取. 若有 $p^{2}$ 阶元, 则生成 $p^{2}$ 阶子群, 即 Sylow $p$-子群, 此时 $N_{p}=1$, Sylow $p$ 子群是正规子群. 
-%     %     下考虑只剩下 $p$ 阶元. 此时, $G$ 中元素阶数只取自 $\{1, p, q\}$, 可知
-%     % \end{itemize}
-%     % \par 
-    
-%     \begin{lemma}\label{lem: p^{2}q}
-%         设 $G $ 为一有限群，$p $ 为 $|G| $ 的最小素因子。
-%         则指数为 $p $ 的子群（如存在）必正规。    
-%     \end{lemma}
-    
-%     \begin{proof}[引理~\ref{lem: p^{2}q} 的证明]
-%         设 $G$ 是有限群, $p$ 是阶数的最小素因子, $H$ 是指数 $p$ 的子群. 则有左陪集分解
-%             \[
-%                 G=\bigsqcup_{i\in I}^{}g_{i}H, 
-%             \]
-%         这里 $|I|=[G:H] \mid |G|$, 只有 $>p$ 的素因子. 
-%     \end{proof}
-%     一定存在 Sylow $p$ 子群, 其指数为 $q$, $q$ 是 $p^{2}q$ 的最小素因子. 使用 Sylow $p$ 子群正规.
-% \end{itemize}
 
+\begin{vain}
+    \begin{itemize}
+        \item 当 $p<q$, 有 $N_{p}\equiv1\pmod{p}, N_{p}\mid q\implies N_{q}=1$; 此时 Sylow $q$-子群正规.
+        \item 当 $p>q$, 有 $N_{q}\equiv1\pmod{q}, N_{q}\mid p^{2}$. 不妨设没有 $p^{2}$ 阶元, 否则它生成 Sylow-$p$ 子群,  
+        并且是唯一的, 等价于正规的.
+        \begin{itemize}
+            \item 若 $N_{q}=1$, 则 Sylow-$q$ 子群正规; 
+            \item 若 $N_{q}=p$, 则 $p=1\pmod{q}$. 这 $p$ 个 Sylow $q$-子群两两仅相交于 $\{e\}$, 计数可得 $q$-阶元有 $p(q-1)$ 个. 
+            所以有 $p(p-q-1)$ 个元, 阶数取值于 $\{1,p,pq\}$. 
+            \item 若 $N_{q}=p^{2}$, 则 $p^{2}=1\pmod{q}$. 这 $p^{2}$ 个 Sylow $q$-子群两两仅相交于 $\{e\}$, 计数可得 $q$-阶元有 $p^{2}(q-1)$ 个. 
+            所以有 $p^{2}$ 个元, 阶数从 $\{1,p, p q\}$ 中取. 
+        \end{itemize}
+    %     % \par 
+        
+    %     \begin{lemma}\label{lem: p^{2}q}
+    %         设 $G $ 为一有限群，$p $ 为 $|G| $ 的最小素因子。
+    %         则指数为 $p $ 的子群（如存在）必正规。    
+    %     \end{lemma}
+    %     一定存在 Sylow $p$ 子群, 其指数为 $q$, $q$ 是 $p^{2}q$ 的最小素因子. 使用 Sylow $p$ 子群正规.
+    \end{itemize}
+\end{vain}
 % \setcounter{pb}{28}
 % \begin{problem}
 %     设 $G $ 为有限群, $A,B $ 是 $G $ 的两个非空子集合。如果 $|A| + |B| > |G| $, 证明 $AB = G $. 
@@ -439,31 +433,6 @@ B = \begin{pmatrix} 0 & 1 \\ -1 & -1 \end{pmatrix}
 % \begin{problem}
 %     Let $G_1 $ and $G_2 $ be simple groups. Show that every normal subgroup of $G = G_1 \times G_2 $, $\neq G $, $\neq 1 $ is isomorphic to either $G_1 $ or $G_2 $.
 % \end{problem}
-    
-\setcounter{pb}{10}
-\begin{problem}
-    Determine $\operatorname{End}(\mathbb{Q},+,0)$.
-\end{problem}
-
-\begin{solution}
-    It is isomorphic to the ring $\mathbb{Q}$:
-        \begin{equation}
-            \label{eqn: pb.grp.more.9}
-            \operatorname{End}(\mathbb{Q},+,0) \to \mathbb{Q},\; f\mapsto f(1). 
-        \end{equation}
-    It suffices to show the morphism is injective.  Suppose $f(1)=g(1)$, then $\forall m\in\mathbb{Z},\forall n\geq1  $, 
-        \[
-            \begin{split}
-                & f(1)=n\cdot f\Big(\frac{1}{n}\Big)=n\cdot g\Big(\frac{1}{n}\Big)=g(1);\\
-                & f\Big(\frac{m}{n}\Big)=m f\Big(\frac{1}{n}\Big)=m g\Big(\frac{1}{n}\Big)=g\Big(\frac{m}{n}\Big).
-            \end{split}
-        \]
-    Thus $f=g$, \eqref{eqn: pb.grp.more.9} is injective. 
-    It keeps addition, and also multiplication:
-        \[
-            f\Big(\frac{m}{n}\Big)=\frac{m}{n}f(1)\implies(f\circ g)(1)=f( g(1) )=f(1) g(1).
-        \]
-\end{solution}
 
 \setcounter{pb}{11}
 
@@ -677,8 +646,8 @@ a e_R = a.
 \end{problem}
 
 \begin{solution}
-    直接的: $|M_{n}(F)|=|F^{n^{2}}|=p^{n^{2}}>\theta$. 
-    \par 注意矩阵 $A\in GL_{n}(F)$ 当且仅当其列向量是线性无关组. 分步计数: 第一列列向量, 可以选择的非零向量有 $p^{n}-1$ 个; 
+    作为 $F$-线性空间, $M_{n}(F)\cong F^{n\times n}$, 所以 $|M_{n}(F)|=|F^{n^{2}}|=p^{n^{2}}$. 
+    \par 矩阵 $A\in GL_{n}(F)$ 当且仅当其列向量是线性无关组. 分步计数: 第一列列向量, 可以选择的非零向量有 $p^{n}-1$ 个; 
     第二列的选择范围剔除第一列生成的子空间, 即 $p^{n}-p$ 种; 第三列的选择范围, 剔除前两个列向量生成的子空间, 即 $p^{n}-p^{2}$ 种; 
     类似继续... 结论即
         \[

@@ -110,6 +110,31 @@
     另一方面, $x\in\ker\varphi\cap \operatorname{im}\varphi\implies x=0$; 因为 $x=\varphi y\implies 0=\varphi x=\varphi y\implies 0=x$. 
     综上所述, 分解 $M=\ker\varphi+\operatorname{im}\varphi$ 是直和分解, 即 $M=\ker\varphi\oplus\operatorname{im}\varphi$. 
 \end{solution}
+    
+\setcounter{pb}{10}
+\begin{problem}
+    Determine $\operatorname{End}(\mathbb{Q},+,0)$.
+\end{problem}
+
+\begin{solution}
+    It is isomorphic to the ring $\mathbb{Q}$:
+        \begin{equation}
+            \label{eqn: pb.grp.more.9}
+            \operatorname{End}(\mathbb{Q},+,0) \to \mathbb{Q},\; f\mapsto f(1). 
+        \end{equation}
+    It suffices to show the morphism is injective.  Suppose $f(1)=g(1)$, then $\forall m\in\mathbb{Z},\forall n\geq1  $, 
+        \[
+            \begin{split}
+                & f(1)=n\cdot f\Big(\frac{1}{n}\Big)=n\cdot g\Big(\frac{1}{n}\Big)=g(1);\\
+                & f\Big(\frac{m}{n}\Big)=m f\Big(\frac{1}{n}\Big)=m g\Big(\frac{1}{n}\Big)=g\Big(\frac{m}{n}\Big).
+            \end{split}
+        \]
+    Thus $f=g$, \eqref{eqn: pb.grp.more.9} is injective. 
+    It keeps addition, and also multiplication:
+        \[
+            f\Big(\frac{m}{n}\Big)=\frac{m}{n}f(1)\implies(f\circ g)(1)=f( g(1) )=f(1) g(1).
+        \]
+\end{solution}
 
 \section{域论}
 \subsection{第七章}
