@@ -446,19 +446,20 @@ B = \begin{pmatrix} 0 & 1 \\ -1 & -1 \end{pmatrix}
 \end{problem}
 
 \begin{solution}
-    作为环同构于 $\mathbb{Q}$:
+    It is isomorphic to the ring $\mathbb{Q}$:
         \begin{equation}
             \label{eqn: pb.grp.more.9}
             \operatorname{End}(\mathbb{Q},+,0) \to \mathbb{Q},\; f\mapsto f(1). 
         \end{equation}
-    这显然是满射, 下证明是单射. 设 $f(1)=g(1)$, 则 $\forall m\in\mathbb{Z},\forall n\geq1  $, 
+    It suffices to show the morphism is injective.  Suppose $f(1)=g(1)$, then $\forall m\in\mathbb{Z},\forall n\geq1  $, 
         \[
             \begin{split}
                 & f(1)=n\cdot f\Big(\frac{1}{n}\Big)=n\cdot g\Big(\frac{1}{n}\Big)=g(1);\\
                 & f\Big(\frac{m}{n}\Big)=m f\Big(\frac{1}{n}\Big)=m g\Big(\frac{1}{n}\Big)=g\Big(\frac{m}{n}\Big).
             \end{split}
         \]
-    所以 $f=g$, \eqref{eqn: pb.grp.more.9} 是单射. 而同态性质: 加法层面是直接根据定义得到的, 乘法层面
+    Thus $f=g$, \eqref{eqn: pb.grp.more.9} is injective. 
+    It keeps addition, and also multiplication:
         \[
             f\Big(\frac{m}{n}\Big)=\frac{m}{n}f(1)\implies(f\circ g)(1)=f( g(1) )=f(1) g(1).
         \]
@@ -475,7 +476,7 @@ B = \begin{pmatrix} 0 & 1 \\ -1 & -1 \end{pmatrix}
 \begin{solution}
     Let $G$ be a group and $H\leq G$ is of index two. Then for $g\in G$, either $ g H=H$ or $G=H\sqcup g H$. 
     \begin{itemize}
-        \item If $g H=H$, then $(g H)^{-1}=H g^{-1}=H^{-1}=H$ and hence $g H g^{-1}=g (H g^{-1})=g H=H$.
+        \item If $g H=H$, then $(g H)^{-1}=H^{-1} g^{-1}=H^{-1}=H$ and hence $g H g^{-1}=g (H g^{-1})=g H=H$.
         \item If $G=H\sqcup g H$, then $g\notin H$ and hence $H g\neq H$; so $G=H\sqcup H g$. Compare and it follows $g H =H g$.
     \end{itemize}
     Above all, $H$ is normal.
@@ -489,12 +490,12 @@ B = \begin{pmatrix} 0 & 1 \\ -1 & -1 \end{pmatrix}
 
 
 \begin{solution}
-    Let $\{G_{i}\}_{i\in I}$ be a family of normal subgroups of $G$ and $\{\pi_{i}\colon G\twoheadrightarrow G/G_{i}\}$ 
+    Let $\{G_{i}\}_{i\in I}$ be a family of normal subgroups of $G$ and $\{\pi_{i}\colon G\twoheadrightarrow G/G_{i}\}_{i\in I}$ 
     be the natural projections. Then 
         \[
             \pi\colon G \to \prod_{i\in I}G/G_{i},\; g\mapsto (\pi_{i}(g))_{i\in I}
         \]
-    is a group hommorphism, whose kernel is $\ker\pi=\bigcap_{i\in I}G_{i}$, which must be a normal subgroup.
+    is a group hommorphism, with kernel $\ker\pi=\bigcap_{i\in I}G_{i}$, which must be a normal subgroup.
 \par Let $H,K$ be normal subgroups of $G$. 
     \begin{itemize}
         \item It is a subgroup. Let $h_{1},h_{2}\in H$ and $k_{1},k_{2}\in K$, we have
@@ -573,16 +574,16 @@ B = \begin{pmatrix} 0 & 1 \\ -1 & -1 \end{pmatrix}
     For $k\in[r]$ and addition in the sense of mod $r$:
         \[
             \alpha(i_{k})
-            \overset{\alpha^{-1}}{\longmapsto} i_{1}
+            \overset{\alpha^{-1}}{\longmapsto} i_{k}
             \overset{(i_1 i_2 \cdots i_r)}{\longmapsto} i_{k+1}
             \overset{\alpha}{\longmapsto} \alpha(i_{k+1}).
         \]
-    For elements invariant under $\alpha$:
+    For elements $\ell$ such that $\alpha(\ell)\notin\{i_{k}\mid k\in[r]\}$:
         \[
-            \ell
+            \alpha(\ell)
             \overset{\alpha^{-1}}{\longmapsto} \ell
             \overset{(i_1 i_2 \cdots i_r)}{\longmapsto} \ell
-            \overset{\alpha}{\longmapsto} \ell.
+            \overset{\alpha}{\longmapsto} \alpha(\ell).
         \]
     Above all, the equality holds.
 \end{solution}
