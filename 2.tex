@@ -7,7 +7,9 @@
 
 \begin{solution}
     我们假设 $\mathbb{Z}[x]$ 中的主理想 $\langle f(x) \rangle $ 是极大的, 则这是极大主理想, 即 $f(x)$ 是不可约元. 
-    而不可约元只有两种: $f(x)=p\in\mathbb{Z}$ 是素数; $f(x)$ 是 $\mathbb{Q}[x]$ 中不可约多项式
+    而不可约元只有两种: $f(x)=p\in\mathbb{Z}$ 是素数; $f(x)$ 是 $\mathbb{Q}[x]$ 中不可约多项式. 
+    当 $f(x)=p$ 是素数, 有 $\mathbb{Z}[x]/\langle p \rangle=\mathbb{F}_{p}[x]$ 是整环不是域, 所以主理想非极大. 
+    当 $f(x)$ 是 $\mathbb{Q}[x]$ 中不可约多项式, 有 $\langle f(x) \rangle \subseteq \langle f(x),p \rangle \subsetneq \mathbb{Z}[x]$ 其中 $p$ 是素数;所以主理想非极大.
 \end{solution}
 
 \section{模论}
@@ -92,7 +94,7 @@
     \end{enumerate}
 \end{problem}
 
-\begin{solution}
+\begin{vain}
     \dots
     \par 我们证明 $\left.{\mathrm{id}}\right|_{M}^{M}=0$, 从而 $M=(0)$; 简记 $\mathrm{id}=\left.{\mathrm{id}}\right|_{M}^{M}$. 由 (1), 有 $f(x) = x^n + a_1 x^{n-1} + \dots + a_n,(a_{i}\in I)$ 使得  
         \[
@@ -101,7 +103,7 @@
     记 $a=\sum_{i=1}^{n}a_{i}\in I$, 下证明 $1+a$ 是 $R$ 中可逆元: 如果不然, 则主理想 $ \langle 1+a \rangle  $ 是非平凡的, 
     于是有某极大理想 $I_{0}\supseteq \langle 1+a \rangle$, 但是 $a\in J(R)\implies a\in I_{0}$, 所以 $1=(1+a)-a\in I_{0}$, 
     矛盾: 极大理想不是平凡理想, 不应该有 $1$. 综上所述, $1+a$ 是可逆的, 故 $\mathrm{id}=0$.
-\end{solution}
+\end{vain}
 
 \setcounter{pb}{6}
 \begin{problem}
@@ -199,13 +201,16 @@
     确定下列多项式在有理数域上的分裂域：
     \begin{enumerate}[label=(\roman*)]
         \item $ f(x) = x^4 - 2 $;
-        \item $ f(x) = x^3 - 2x - 2 $;
-        \item $ f(x) = x^3 - 3x - 1 $.
+        \item $ f(x) = x^3 - 2x - 2 $.
+        % \item $ f(x) = x^3 - 3x - 1 $.
     \end{enumerate}
 \end{problem}
 
 \begin{solution}
-    
+\begin{enumerate}[label=(\roman*)]
+    \item 即 $\mathbb{Q}(\sqrt[4]{2},i)$.
+    \item 
+\end{enumerate}
 \end{solution}
 
 \subsection{第八章}
@@ -256,10 +261,24 @@
     证明 $ E/\mathbb{Q} $ 正规，并决定 $ \operatorname{Gal}(E/\mathbb{Q}) $.
 \end{problem}
 
-% \begin{solution}
-%     这时 $E$ 是多项式 $f(x)=x^{2}-\theta$ 的分裂域, 所以是正规扩张; $\operatorname{Gal}(E/\mathbb{Q})=\{\mathrm{id}_{E},\sigma\}$, 
-%     其中 $\left.{\sigma}\right|_{\mathbb{Q}}^{\mathbb{Q}}=\mathrm{id}_{\mathbb{Q}}$, $\sigma(\sqrt{\theta})=-\sqrt{\theta}$.
-% \end{solution}
+\begin{solution}
+    这时 $E$ 是 $K[x]$ 中多项式 $f(x)=x^{2}-\theta$ 的分裂域, 所以是正规扩张; $\operatorname{Gal}(E/\mathbb{Q})=\{\mathrm{id}_{E},\sigma\}$, 
+    其中 $\left.{\sigma}\right|_{\mathbb{Q}}^{\mathbb{Q}}=\mathrm{id}_{\mathbb{Q}}$, $\sigma(\sqrt{\theta})=-\sqrt{\theta}$.
+\end{solution}
+
+\subsection{补充}
+\setcounter{pb}{1}
+\begin{problem}
+令 $K$ 是有理数 $\mathbb{Q}$ 上全体代数数做成的数域，证明：$K$ 是 $\mathbb{Q}$ 的代数扩张，但不是有限扩张。
+\end{problem}
+
+\begin{solution}
+    任取 $x\in K$, 由定义, 存在 $f(X)\in\mathbb{Q}[X]$ 使得 $f(x)=0$. 于是是代数扩张. 
+    考虑子扩张 $\mathbb{Q}(\{\sqrt[n]{2}\mid n\geq1 \})/\mathbb{Q}$. 
+    这不是有限扩张: 注意 $\mathbb{Q}(\{\sqrt[n]{2}\mid n\geq1 \})=\bigcup_{n\geq1}\mathbb{Q}(\sqrt[n]{2})$, 
+    如果这是有限扩张, 则一定有 $\mathbb{Q}(\{\sqrt[n]{2}\mid n\geq1 \})=\bigcup_{n\in[N]}\mathbb{Q}(\sqrt[n]{2})$ 
+    对某个 $N$ 成立, 此时.
+\end{solution}
 
 \subsection{更多习题}
 
