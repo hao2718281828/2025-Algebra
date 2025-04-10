@@ -2,14 +2,44 @@
 \section{环论}
 \setcounter{pb}{8}
 \begin{problem}
+    \label{pb: ring, 8}
     证明 $ \mathbb{Z}[x] $ 的任一个主理想非极大。
 \end{problem}
+
+\begin{lemma}
+    If $f(x)$ is irreducible in $\mathbb{Z}[x]$, then only the following two possibilities exist: 
+    \begin{enumerate}
+        \item $f(x)$ is a prime in $\mathbb{Z}$;
+        \item $f(x)$ is irreducible in $\mathbb{Q}[x]$.
+    \end{enumerate}
+\end{lemma}
+\begin{proof}[Proof.]
+    In the case $\deg f(x)=0$: it turns out that it is a prime. In the case $\deg f(x)\geq1$, we have $f(x)=c f_0(x)$, 
+    for a primitive polynomial $f_0(x)$ and $c\in\mathbb{Z}$. We assume $c\in\{\pm1\}$ by irreduciblity. 
+    For a primitive polynomial, it is irreducible in $\mathbb{Z}[x]$ if and only if it is irreducible in $\mathbb{Q}[x]$.
+\end{proof}
 
 \begin{solution}
     我们假设 $\mathbb{Z}[x]$ 中的主理想 $\langle f(x) \rangle $ 是极大的, 则这是极大主理想, 即 $f(x)$ 是不可约元. 
     而不可约元只有两种: $f(x)=p\in\mathbb{Z}$ 是素数; $f(x)$ 是 $\mathbb{Q}[x]$ 中不可约多项式. 
     当 $f(x)=p$ 是素数, 有 $\mathbb{Z}[x]/\langle p \rangle=\mathbb{F}_{p}[x]$ 是整环不是域, 所以主理想非极大. 
     当 $f(x)$ 是 $\mathbb{Q}[x]$ 中不可约多项式, 有 $\langle f(x) \rangle \subseteq \langle f(x),p \rangle \subsetneq \mathbb{Z}[x]$ 其中 $p$ 是素数;所以主理想非极大.
+\end{solution}
+
+\subsection{更多习题}
+\setcounter{pb}{13}
+
+\begin{problem}
+    Show that the ideal $(3, x^3-x^2 + 2x- 1)$ in $\mathbb{Z}[x]$ is not principal.
+\end{problem}
+
+\begin{solution}
+    This ideal is maximal:
+        \[
+            \mathbb{Z}[x]/(3, x^3-x^2 + 2x- 1)\cong({\mathbb{F}_3[x]})/( x^3-x^2 + 2x- 1),
+        \]
+    since $x^3-x^2 + 2x- 1$ has no roots in $\mathbb{F}_3$; it is irreducible. 
+    From 题目~\ref{pb: ring, 8}, we know it is not principal.
 \end{solution}
 
 \section{模论}
@@ -209,7 +239,8 @@
 \begin{solution}
 \begin{enumerate}[label=(\roman*)]
     \item 即 $\mathbb{Q}(\sqrt[4]{2},i)$.
-    \item 
+    \item 有理根只可能是 $\pm1,\pm2$, 计算可见没有有理根, 从而他是不可约多项式. 判别式 $\Delta=-4(-2)^3-27(-2)^2=-66$ 不是 $\mathbb{Q}$ 中平方元. 
+    所以分裂域是 $\mathbb{Q}(\alpha,\sqrt{\Delta})$, 其中 $\alpha$ 是 $f(x)$ 的实数根.
 \end{enumerate}
 \end{solution}
 
@@ -231,15 +262,9 @@
 \end{problem}
 
 \begin{solution}
-    记所求为 $G$. 观察中间域 $\mathbb{Q}(\sqrt{2}),\mathbb{Q}(\sqrt{3})$ 得到两个子群 $\langle  \sigma \rangle, \langle \tau \rangle  $:
-    \[
-        \begin{split}
-            \sigma\colon  K\to K,\; r+s\sqrt{2}+t\sqrt{3}\mapsto r-s\sqrt{2}+t\sqrt{3};\\
-            \tau\colon  K\to K,\; r+s\sqrt{2}+t\sqrt{3}\mapsto r+s\sqrt{2}-t\sqrt{3}.
-        \end{split}
-    \]
-    这两个子群都是正规的(因为对应的扩张是正规扩张), 而且交为平凡的(因为子群的交对应中间域的合成), 所以 $\langle \sigma,\tau \rangle \cong (\mathbb{Z}/\langle 2 \rangle)^{2} $. 
-    计数可得 $G=\langle \sigma,\tau \rangle \cong (\mathbb{Z}/\langle 2 \rangle)^{2}$.
+    记所求为 $G$. 域自同构保持多项式的根集, 所以 $\sqrt{2}\mapsto\sqrt{2}$ 或者 $\sqrt{2}\mapsto-\sqrt{2}$, 且这两种必有一种成立, 同理于 $\sqrt{3}$. 
+    令 $\sigma(\sqrt{2})=-\sqrt{2},\sigma(\sqrt{3})=\sqrt{3}$; $\tau(\sqrt{2})=\sqrt{2},\tau(\sqrt{3})=-\sqrt{3}$.
+    可知 $G=\langle \sigma,\tau \rangle \cong (\mathbb{Z}/\langle 2 \rangle)^{2}$.
 \end{solution}
 
 \setcounter{pb}{6}
@@ -261,10 +286,10 @@
     证明 $ E/\mathbb{Q} $ 正规，并决定 $ \operatorname{Gal}(E/\mathbb{Q}) $.
 \end{problem}
 
-\begin{solution}
-    这时 $E$ 是 $K[x]$ 中多项式 $f(x)=x^{2}-\theta$ 的分裂域, 所以是正规扩张; $\operatorname{Gal}(E/\mathbb{Q})=\{\mathrm{id}_{E},\sigma\}$, 
-    其中 $\left.{\sigma}\right|_{\mathbb{Q}}^{\mathbb{Q}}=\mathrm{id}_{\mathbb{Q}}$, $\sigma(\sqrt{\theta})=-\sqrt{\theta}$.
-\end{solution}
+% \begin{solution}
+%     这时 $E$ 是 $K[x]$ 中多项式 $f(x)=x^{2}-\theta$ 的分裂域, 所以是正规扩张; $\operatorname{Gal}(E/K)=\{\mathrm{id}_{E},\sigma\}$, 
+%     其中 $\sigma(\sqrt{\theta})=-\sqrt{\theta}$.
+% \end{solution}
 
 \subsection{补充}
 \setcounter{pb}{1}
@@ -276,8 +301,11 @@
     任取 $x\in K$, 由定义, 存在 $f(X)\in\mathbb{Q}[X]$ 使得 $f(x)=0$. 于是是代数扩张. 
     考虑子扩张 $\mathbb{Q}(\{\sqrt[n]{2}\mid n\geq1 \})/\mathbb{Q}$. 
     这不是有限扩张: 注意 $\mathbb{Q}(\{\sqrt[n]{2}\mid n\geq1 \})=\bigcup_{n\geq1}\mathbb{Q}(\sqrt[n]{2})$, 
-    如果这是有限扩张, 则一定有 $\mathbb{Q}(\{\sqrt[n]{2}\mid n\geq1 \})=\bigcup_{n\in[N]}\mathbb{Q}(\sqrt[n]{2})$ 
-    对某个 $N$ 成立, 此时.
+    如果这是有限扩张, 则一定有 
+        \[
+            \mathbb{Q}(\{\sqrt[n]{2}\mid n\geq1 \})=\bigcup_{n\in[N]}\mathbb{Q}(\sqrt[n]{2})=\mathbb{Q}(\sqrt[N]{2}),
+        \]
+    对某个 $N$ 成立. 这不可能, $\sqrt[N+1]{2}$ 不在里面. 综上所述, 这个子扩张无限, 所以问题中的扩张无限. 
 \end{solution}
 
 \subsection{更多习题}
