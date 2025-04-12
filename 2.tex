@@ -315,9 +315,11 @@ Let $F$ be a field of characteristic $p$, $a$ an element of $F$ not of the form 
 \end{problem}
 
 \begin{solution}
-    % Let $\beta$ be a root of $f(x)\coloneqq  x^p-x-a$ in the algebraic closure of $F$. We claim that $x^p-x-a$ splits in $F(\beta)$. 
-    % Notice that $f(x+1)=f(x)$ by the Frobenius endomorphism. Thus, $\beta+1, \beta+2,\dots,\beta+p-1$ are also roots of $f(x)$. 
-    % The splitting field is $F(\beta)$. 
+    Let $\beta$ be a root of $f(x)\coloneqq  x^p-x-a$ in the algebraic closure of $F$. We claim that $x^p-x-a$ splits in $F(\beta)$. 
+    Notice that $f(x+1)=f(x)$ by the Frobenius endomorphism. Thus, $\beta+1, \beta+2,\dots,\beta+p-1$ are also roots of $f(x)$. 
+    The splitting field is $F(\beta)$. There is a automorphism $\sigma$ of $F(\beta)$, determined by $\beta=\beta+1$. 
+    We find $\operatorname{ord}\sigma=p$. Thus $\langle \sigma \rangle\cong C_{p}$, the cyclic group of order $p$. 
+    From $|\operatorname{Gal}(F(\beta)/F)|=[F(\beta):F]=n$, we have $\langle \sigma \rangle=\operatorname{Gal}(F(\beta)/F)$.
 \end{solution}
 
 \setcounter{pb}{21}
@@ -326,7 +328,12 @@ Let $F$ be a finite field of characteristic $p$ (a prime). Show that $(p - 1) \m
 \end{problem}
 
 \begin{solution}
-    The prime field is $\mathbb{F}_{p}\hookrightarrow F$. Then $\mathbb{F}_{p}^{\times}\leq F^{\times}$ as a subgroup. Langrange's Theorem ensures $p-1\mid(|F|-1)$.
+    The prime field is $\mathbb{F}_{p}\hookrightarrow F$. Then $\mathbb{F}_{p}^{\times}\leq F^{\times}$ as a subgroup. Langrange's Theorem ensures $p-1\mid(|F|-1)$. 
+    Thus, $|F|-1=(p-1)k$ for some $k\in\mathbb{Z}$ and thus 
+        \[
+            |F|=0\pmod 2\implies (p-1)k=1\pmod2.
+        \]
+    This can happen in the case $p=2$ only.
 \end{solution}
 
 % \setcounter{pb}{2}
@@ -392,3 +399,10 @@ Let $F$ be a finite field of characteristic $p$ (a prime). Show that $(p - 1) \m
 \begin{problem}
     Please state the Galois main theorem clearly.
 \end{problem}
+
+% % \begin{solution}
+%     Let $E/F$ be a finite Galois extension. We have the following results:
+%     \begin{enumerate}
+%         \item 
+%     \end{enumerate}
+% % \end{solution}
