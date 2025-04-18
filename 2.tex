@@ -421,9 +421,13 @@ Let $F$ be a finite field of characteristic $p$ (a prime). Show that $(p - 1) \m
     Please state the Galois main theorem clearly.
 \end{problem}
 
-% % \begin{solution}
-%     Let $E/F$ be a finite Galois extension. We have the following results:
-%     \begin{enumerate}
-%         \item 
-%     \end{enumerate}
-% % \end{solution}
+% \begin{solution}
+    Let $E/F$ be a finite Galois extension and $G \coloneqq \operatorname{Gal}(E/F)$. We have the following results:
+    \begin{enumerate}
+        \item For a subgroup $H\leq G$, we have $\operatorname{Gal}(E/\operatorname{Inv}H)=H$. For an intermediate field $K$, we have $\operatorname{Inv}(Gal(E/K))=K$. 
+        \item The dimensions $[E:K]=|\operatorname{Gal}(E/K)|$, $[K:F]=[G:\operatorname{Gal}(E/K)]$.
+        \item Both of $\operatorname{Gal}$, $\operatorname{Inv}$ are order-reversing. 
+        \item If $H\leq G$ and $\alpha\in G$, and $\operatorname{Inv}H=K$. Then $\operatorname{Inv}(\alpha H \alpha^{-1})=\alpha(K)$. 
+        \item The extension $K/F$ is Galois if and only if $H=\operatorname{Gal}(E/K)$ is a normal subgroup of  $G$. At that time, $\operatorname{Gal}(K/F)=G/H$.
+    \end{enumerate}
+% \end{solution}
