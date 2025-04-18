@@ -42,6 +42,27 @@
     From 题目~\ref{pb: ring, 8}, we know it is not principal.
 \end{solution}
 
+\setcounter{pb}{28}
+
+\begin{problem}
+    For a commutative ring with unit, show that the intersection of prime ideals is the set of nilpotent elements.
+\end{problem}
+
+\begin{solution}
+    Let $R$ be a commutative ring with unit. We want to show $\bigcap \operatorname{Spec}R=\sqrt{(0)}$. Here $\sqrt{(0)}$ is the radical ideal of $(0)$. 
+    Let $ a\in\sqrt{(0)}$, then $a^{n}=0$ for some $n\geq1$. Thus $ a^{n}\in I $ for all $I\in \operatorname{Spec}R$. 
+    Write $a^{n}=a^{n-1}a$. We know $a\in I$ or $a^{n-1}\in I$. If $a\in I$, then we are done; if $a^{n-1}\in I$, then write $a^{n-1}=a a^{n-2}$ when $n-1>1$. 
+    Anyway, we have $a\in I$ finally. Thus $ a\in I$ for all prime ideals $I$ and $a\in\bigcap \operatorname{Spec}R$. We proved $\bigcap \operatorname{Spec}R\supseteq \sqrt{(0)}$. 
+    \par Let $ a\in \bigcap \operatorname{Spec}R $. Suppose, $a\notin\sqrt{(0)}$, that is $a^{n}\ne0, \forall n\geq1$. Then $S \coloneqq \{a^{n}:n\geq1\}$ 
+    is a multiplicative subset of $R$ without $0$. Consider the localization $R\to RS^{-1}$, where $R S^{-1}$ is non-trivial. 
+    We have a bijection 
+        \[
+            \{I\in \operatorname{Spec}R: I\cap S=\varnothing\}=\operatorname{Spec}(R S^{-1}).
+        \]
+    By Zorn's Lemma, $R S^{-1}$ has a maximal ideal and hence a prime ideal. Thus $\operatorname{Spec}(R S^{-1})\ne\varnothing$. 
+    The bijection gives an ideal $I\in \operatorname{Spec}R$ with $I\cap S=\varnothing$. Therefore, $a\notin\bigcap \operatorname{Spec}R$. 
+\end{solution}
+
 \section{模论}
 \subsection{第五章}
 \setcounter{pb}{4}
@@ -161,7 +182,7 @@
 \begin{solution}
     It is isomorphic to the ring $\mathbb{Q}$:
         \begin{equation}
-            \label{eqn: pb.grp.more.9}
+            \label{eqn: pb.more.10}
             \operatorname{End}(\mathbb{Q},+,0) \to \mathbb{Q},\; f\mapsto f(1). 
         \end{equation}
     It suffices to show the morphism is injective.  Suppose $f(1)=g(1)$, then $\forall m\in\mathbb{Z},\forall n\geq1  $, 
@@ -171,7 +192,7 @@
                 & f\Big(\frac{m}{n}\Big)=m f\Big(\frac{1}{n}\Big)=m g\Big(\frac{1}{n}\Big)=g\Big(\frac{m}{n}\Big).
             \end{split}
         \]
-    Thus $f=g$, \eqref{eqn: pb.grp.more.9} is injective. 
+    Thus $f=g$, \eqref{eqn: pb.more.10} is injective. 
     It keeps addition, and also multiplication:
         \[
             f\Big(\frac{m}{n}\Big)=\frac{m}{n}f(1)\implies(f\circ g)(1)=f( g(1) )=f(1) g(1).
