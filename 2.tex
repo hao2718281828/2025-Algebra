@@ -146,15 +146,17 @@
 \end{problem}
 
 \begin{vain}
-    \dots
-    \par 我们证明 $\left.{\mathrm{id}}\right|_{M}^{M}=0$, 从而 $M=(0)$; 简记 $\mathrm{id}=\left.{\mathrm{id}}\right|_{M}^{M}$. 由 (1), 有 $f(x) = x^n + a_1 x^{n-1} + \dots + a_n,(a_{i}\in I)$ 使得  
-        \[
-            f(\mathrm{id})=\Bigl(1+\sum_{i=1}^{n}a_{i}\Bigr)\mathrm{id}=0.
-        \]
-    记 $a=\sum_{i=1}^{n}a_{i}\in I$, 下证明 $1+a$ 是 $R$ 中可逆元: 如果不然, 则主理想 $ \langle 1+a \rangle  $ 是非平凡的, 
-    于是有某极大理想 $I_{0}\supseteq \langle 1+a \rangle$, 但是 $a\in J(R)\implies a\in I_{0}$, 所以 $1=(1+a)-a\in I_{0}$, 
-    矛盾: 极大理想不是平凡理想, 不应该有 $1$. 综上所述, $1+a$ 是可逆的, 故 $\mathrm{id}=0$.
-\end{vain}
+\begin{enumerate}[label=(\arabic*)]
+    \item \dots
+    \item 我们证明 $\left.{\mathrm{id}}\right|_{M}^{M}=0$, 从而 $M=(0)$; 简记 $\mathrm{id}=\left.{\mathrm{id}}\right|_{M}^{M}$. 由 (1), 有 $f(x) = x^n + a_1 x^{n-1} + \dots + a_n,(a_{i}\in I)$ 使得  
+            \[
+                f(\mathrm{id})=\Bigl(1+\sum_{i=1}^{n}a_{i}\Bigr)\mathrm{id}=0.
+            \]
+        记 $a=\sum_{i=1}^{n}a_{i}\in I$, 下证明 $1+a$ 是 $R$ 中可逆元: 如果不然, 则主理想 $ \langle 1+a \rangle  $ 是非平凡的, 
+        于是有某极大理想 $I_{0}\supseteq \langle 1+a \rangle$, 但是 $a\in J(R)\implies a\in I_{0}$, 所以 $1=(1+a)-a\in I_{0}$, 
+        矛盾: 极大理想不是平凡理想, 不应该有 $1$. 综上所述, $1+a$ 是可逆的, 故 $\mathrm{id}=0$.
+    
+\end{enumerate}\end{vain}
 
 \setcounter{pb}{6}
 \begin{problem}
@@ -324,7 +326,7 @@
     这不是有限扩张: 注意 $\mathbb{Q}(\{\sqrt[n]{2}\mid n\geq1 \})=\bigcup_{n\geq1}\mathbb{Q}(\sqrt[n]{2})$, 
     如果这是有限扩张, 则一定有 
         \[
-            \mathbb{Q}(\{\sqrt[n]{2}\mid n\geq1 \})=\bigcup_{n\in[N]}\mathbb{Q}(\sqrt[n]{2})=\mathbb{Q}(\sqrt[N]{2}),
+            \mathbb{Q}(\{\sqrt[n]{2}\mid n\geq1 \})=\bigcup_{n\in[N]}\mathbb{Q}(\sqrt[n]{2}),
         \]
     对某个 $N$ 成立. 这不可能, $\sqrt[N+1]{2}$ 不在里面. 综上所述, 这个子扩张无限, 所以问题中的扩张无限. 
 \end{solution}
@@ -421,7 +423,7 @@ Let $F$ be a finite field of characteristic $p$ (a prime). Show that $(p - 1) \m
     Please state the Galois main theorem clearly.
 \end{problem}
 
-% \begin{solution}
+\begin{solution}
     Let $E/F$ be a finite Galois extension and $G \coloneqq \operatorname{Gal}(E/F)$. We have the following results:
     \begin{enumerate}
         \item For a subgroup $H\leq G$, we have $\operatorname{Gal}(E/\operatorname{Inv}H)=H$. For an intermediate field $K$, we have $\operatorname{Inv}(Gal(E/K))=K$. 
@@ -430,4 +432,4 @@ Let $F$ be a finite field of characteristic $p$ (a prime). Show that $(p - 1) \m
         \item If $H\leq G$ and $\alpha\in G$, and $\operatorname{Inv}H=K$. Then $\operatorname{Inv}(\alpha H \alpha^{-1})=\alpha(K)$. 
         \item The extension $K/F$ is Galois if and only if $H=\operatorname{Gal}(E/K)$ is a normal subgroup of  $G$. At that time, $\operatorname{Gal}(K/F)=G/H$.
     \end{enumerate}
-% \end{solution}
+\end{solution}
