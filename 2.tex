@@ -39,7 +39,7 @@
             \mathbb{Z}[x]/(3, x^3-x^2 + 2x- 1)\cong({\mathbb{F}_3[x]})/( x^3-x^2 + 2x- 1),
         \]
     since $x^3-x^2 + 2x- 1$ has no roots in $\mathbb{F}_3$; it is irreducible. 
-    From 题目~\ref{pb: ring, 8}, we know it is not principal.
+    From 解答~\ref{pb: ring, 8}, we know it is not principal.
 \end{solution}
 
 \setcounter{pb}{28}
@@ -129,7 +129,7 @@
     \par 假设 $\mathbb{Q}$ 是自由 $\mathbb{Z}$ 模, 而前述性质表明, 它没有秩 $>1$ 的有限生成子模, 故只能是秩为 $1$ 的自由模, 这不可能: 若是秩为 $1$ 的自由 $\mathbb{Z}$ 模, 则正的部分应有最小元.
 \end{solution}
 
-\subsection{第六章}
+% \subsection{第六章}
 
 \subsection{补充}
 
@@ -157,6 +157,19 @@
         矛盾: 极大理想不是平凡理想, 不应该有 $1$. 综上所述, $1+a$ 是可逆的, 故 $\mathrm{id}=0$.
     
 \end{enumerate}\end{vain}
+
+\setcounter{pb}{5}
+\begin{problem}
+证明任一 $R$ 模都是某个自由 $R$ 模的同态像。
+\end{problem}
+
+\begin{solution}
+    设有 $R$ 模 $M$, 有同态 
+        \[
+            R^{ M}\longrightarrow M,\, (\lambda_{a})_{a\in M}\longmapsto \sum_{a\in M}\lambda_a a.
+        \]
+    这是满同态, 因为 $\delta_{a}\mapsto a$, 其中 $\delta_{a}(a)=1$; $\delta_{a}(x)=0(\forall x\ne a)$.
+\end{solution}
 
 \setcounter{pb}{6}
 \begin{problem}
@@ -290,24 +303,24 @@
     可知 $G=\langle \sigma,\tau \rangle \cong (\mathbb{Z}/\langle 2 \rangle)^{2}$.
 \end{solution}
 
-\setcounter{pb}{6}
-\begin{problem}
-    设 $ F $ 为多项式环 $ \mathbb{F}_p[t] $ 的商域，即 $ F = \mathbb{F}_p(t) $. 
-    令 $ K $ 为多项式 $ f(x) = x^p - t $ 在 $ F $ 上的分裂域. 
-    证明 $ \operatorname{Gal}(K/F) = \{1\} $.
-\end{problem}
+% \setcounter{pb}{6}
+% \begin{problem}
+%     设 $ F $ 为多项式环 $ \mathbb{F}_p[t] $ 的商域，即 $ F = \mathbb{F}_p(t) $. 
+%     令 $ K $ 为多项式 $ f(x) = x^p - t $ 在 $ F $ 上的分裂域. 
+%     证明 $ \operatorname{Gal}(K/F) = \{1\} $.
+% \end{problem}
 
-\begin{problem}
-    设 $ F = \mathbb{F}_p(t) $ 如习题 6. 
-    令 $ K $ 为 $ f(x) = x^{2p} + t x^p + t $ 在 $ F $ 上的分裂域. 
-    试决定 $ \operatorname{Gal}(K/F) $，并定出 $ \operatorname{Gal}(K/F) $ 的不动域和 $ F $ 在 $ K $ 内的可分闭包. 
-\end{problem}
+% \begin{problem}
+%     设 $ F = \mathbb{F}_p(t) $ 如习题 6. 
+%     令 $ K $ 为 $ f(x) = x^{2p} + t x^p + t $ 在 $ F $ 上的分裂域. 
+%     试决定 $ \operatorname{Gal}(K/F) $，并定出 $ \operatorname{Gal}(K/F) $ 的不动域和 $ F $ 在 $ K $ 内的可分闭包. 
+% \end{problem}
 
-\setcounter{pb}{14}
-\begin{problem}
-    设 $ K = \mathbb{Q}(\sqrt{2}, \sqrt{3}) $, $ \theta = (2 - \sqrt{2})(3 + \sqrt{3}) $, $ E = K(\sqrt{\theta}) $.
-    证明 $ E/\mathbb{Q} $ 正规，并决定 $ \operatorname{Gal}(E/\mathbb{Q}) $.
-\end{problem}
+% \setcounter{pb}{14}
+% \begin{problem}
+%     设 $ K = \mathbb{Q}(\sqrt{2}, \sqrt{3}) $, $ \theta = (2 - \sqrt{2})(3 + \sqrt{3}) $, $ E = K(\sqrt{\theta}) $.
+%     证明 $ E/\mathbb{Q} $ 正规，并决定 $ \operatorname{Gal}(E/\mathbb{Q}) $.
+% \end{problem}
 
 % \begin{solution}
 %     这时 $E$ 是 $K[x]$ 中多项式 $f(x)=x^{2}-\theta$ 的分裂域, 所以是正规扩张; $\operatorname{Gal}(E/K)=\{\mathrm{id}_{E},\sigma\}$, 
@@ -340,7 +353,7 @@ Let $F$ be a field of characteristic $p$, $a$ an element of $F$ not of the form 
 \begin{solution}
     Let $\beta$ be a root of $f(x)\coloneqq  x^p-x-a$ in the algebraic closure of $F$. We claim that $x^p-x-a$ splits in $F(\beta)$. 
     Notice that $f(x+1)=f(x)$ by the Frobenius endomorphism. Thus, $\beta+1, \beta+2,\dots,\beta+p-1$ are also roots of $f(x)$. 
-    The splitting field is $F(\beta)$. There is a automorphism $\sigma$ of $F(\beta)$, determined by $\beta=\beta+1$. 
+    The splitting field is $F(\beta)$. There is a automorphism $\sigma$ of $F(\beta)$, determined by $\sigma\beta=\beta+1$. 
     We find $\operatorname{ord}\sigma=p$. Thus $\langle \sigma \rangle\cong C_{p}$, the cyclic group of order $p$. 
     From $|\operatorname{Gal}(F(\beta)/F)|=[F(\beta):F]=n$, we have $\langle \sigma \rangle=\operatorname{Gal}(F(\beta)/F)$.
 \end{solution}
